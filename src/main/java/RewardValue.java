@@ -1,5 +1,5 @@
 public class RewardValue {
-    private double cash;
+    private double cashValue;
     private double milesValue;
 
     // This is the rate for converting miles to cash
@@ -7,27 +7,27 @@ public class RewardValue {
 
     // Constructor for cash
     public RewardValue(double cash) {
-        this.cash = cash;
+        this.cashValue = cash;
         this.milesValue = cash / RATE;
     }
 
     // Constructor for miles
     public RewardValue(int miles) {
         this.milesValue = miles;
-        this.cash = miles * RATE;
+        this.cashValue = miles * RATE;
     }
 
     // Get the cash value
-    public double getCash() {
-        return cash;
+    public double getCashValue() {
+        return this.cashValue;
     }
 
-    // Get the miles value
+    // Get the miles value as a double
     public double getMiles() {
-        return milesValue;
+        return this.milesValue;
     }
 
     public String getMilesValue() {
-        return String.format("%.2f miles", milesValue);
+        return String.format("%.2f miles", this.milesValue);
     }
 }
